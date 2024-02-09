@@ -6,8 +6,8 @@ import requests
 import json
 import pytest
 
-BASE_URL = os.environ.get("BASE_URL")
-#BASE_URL = "https://8cmhxersvk.execute-api.us-east-1.amazonaws.com/Prod"
+#BASE_URL = os.environ.get("BASE_URL")
+BASE_URL = BASE_URI
 DEFAULT_TIMEOUT = 2  # in secs
 
 
