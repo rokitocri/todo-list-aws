@@ -1,1 +1,0 @@
-BASE_URI = https://8cmhxersvk.execute-api.us-east-1.amazonaws.com/Prod
