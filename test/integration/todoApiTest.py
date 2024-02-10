@@ -7,7 +7,7 @@ import json
 import pytest
 
 
-BASE_URL = os.environ.get("MY_BASE_URI")
+BASE_URL = os.environ.get("BASE_URI")
 #BASE_URL = BASE_URI
 DEFAULT_TIMEOUT = 2  # in secs
 
