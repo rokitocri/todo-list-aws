@@ -8,7 +8,7 @@ import pytest
 
 
 #BASE_URL = os.environ.get(BASE_URI)
-BASE_URL = BASE_URI
+BASE_URL = "https://7m6ivjo67g.execute-api.us-east-1.amazonaws.com/Prod"
 DEFAULT_TIMEOUT = 2  # in secs
 
 
