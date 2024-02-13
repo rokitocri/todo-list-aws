@@ -17,8 +17,3 @@
 Initiating deployment
 =====================
 
-
-
-Waiting for changeset to be created..
-
-No changes to deploy. Stack production is up to date
