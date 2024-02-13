@@ -17,3 +17,195 @@
 Initiating deployment
 =====================
 
+
+
+Waiting for changeset to be created..
+
+CloudFormation stack changeset
+-------------------------------------------------------------------------------------------------
+Operation                LogicalResourceId        ResourceType             Replacement            
+-------------------------------------------------------------------------------------------------
++ Add                    CreateTodoFunctionCrea   AWS::Lambda::Permissio   N/A                    
+                         tePermissionProd         n                                               
++ Add                    CreateTodoFunction       AWS::Lambda::Function    N/A                    
++ Add                    DeleteTodoFunctionCrea   AWS::Lambda::Permissio   N/A                    
+                         tePermissionProd         n                                               
++ Add                    DeleteTodoFunction       AWS::Lambda::Function    N/A                    
++ Add                    GetTodoFunctionCreateP   AWS::Lambda::Permissio   N/A                    
+                         ermissionProd            n                                               
++ Add                    GetTodoFunction          AWS::Lambda::Function    N/A                    
++ Add                    ListTodosFunctionCreat   AWS::Lambda::Permissio   N/A                    
+                         ePermissionProd          n                                               
++ Add                    ListTodosFunction        AWS::Lambda::Function    N/A                    
++ Add                    ServerlessRestApiDeplo   AWS::ApiGateway::Deplo   N/A                    
+                         yment141b842de6          yment                                           
++ Add                    ServerlessRestApiProdS   AWS::ApiGateway::Stage   N/A                    
+                         tage                                                                     
++ Add                    ServerlessRestApi        AWS::ApiGateway::RestA   N/A                    
+                                                  pi                                              
++ Add                    TodosDynamoDbTable       AWS::DynamoDB::Table     N/A                    
++ Add                    UpdateTodoFunctionCrea   AWS::Lambda::Permissio   N/A                    
+                         tePermissionProd         n                                               
++ Add                    UpdateTodoFunction       AWS::Lambda::Function    N/A                    
+-------------------------------------------------------------------------------------------------
+
+
+Changeset created successfully. arn:aws:cloudformation:us-east-1:921299533537:changeSet/samcli-deploy1707846497/18d4afde-be45-45fa-a5c3-2ceec10bf135
+
+
+2024-02-13 17:48:23 - Waiting for stack create/update to complete
+
+CloudFormation events from stack operations (refresh every 5.0 seconds)
+-------------------------------------------------------------------------------------------------
+ResourceStatus           ResourceType             LogicalResourceId        ResourceStatusReason   
+-------------------------------------------------------------------------------------------------
+CREATE_IN_PROGRESS       AWS::DynamoDB::Table     TodosDynamoDbTable       -                      
+CREATE_IN_PROGRESS       AWS::DynamoDB::Table     TodosDynamoDbTable       Resource creation      
+                                                                           Initiated              
+CREATE_COMPLETE          AWS::DynamoDB::Table     TodosDynamoDbTable       -                      
+CREATE_IN_PROGRESS       AWS::Lambda::Function    ListTodosFunction        -                      
+CREATE_IN_PROGRESS       AWS::Lambda::Function    CreateTodoFunction       -                      
+CREATE_IN_PROGRESS       AWS::Lambda::Function    GetTodoFunction          -                      
+CREATE_IN_PROGRESS       AWS::Lambda::Function    DeleteTodoFunction       -                      
+CREATE_IN_PROGRESS       AWS::Lambda::Function    UpdateTodoFunction       -                      
+CREATE_IN_PROGRESS       AWS::Lambda::Function    ListTodosFunction        Resource creation      
+                                                                           Initiated              
+CREATE_IN_PROGRESS       AWS::Lambda::Function    GetTodoFunction          Resource creation      
+                                                                           Initiated              
+CREATE_IN_PROGRESS       AWS::Lambda::Function    DeleteTodoFunction       Resource creation      
+                                                                           Initiated              
+CREATE_IN_PROGRESS       AWS::Lambda::Function    UpdateTodoFunction       Resource creation      
+                                                                           Initiated              
+CREATE_IN_PROGRESS       AWS::Lambda::Function    CreateTodoFunction       Resource creation      
+                                                                           Initiated              
+CREATE_FAILED            AWS::Lambda::Function    ListTodosFunction        Resource handler       
+                                                                           returned message: "The 
+                                                                           runtime parameter of   
+                                                                           python3.7 is no longer 
+                                                                           supported for creating 
+                                                                           or updating AWS Lambda 
+                                                                           functions. We          
+                                                                           recommend you use the  
+                                                                           new runtime            
+                                                                           (python3.12) while     
+                                                                           creating or updating   
+                                                                           functions. (Service:   
+                                                                           Lambda, Status Code:   
+                                                                           400, Request ID: 9cadc 
+                                                                           4f4-f5ae-44d8-a7e3-    
+                                                                           60b579f9b12f)"         
+                                                                           (RequestToken: e2b634d 
+                                                                           7-c35f-8eb3-9c89-      
+                                                                           ccb0ddd9adf3,          
+                                                                           HandlerErrorCode:      
+                                                                           InvalidRequest)        
+CREATE_FAILED            AWS::Lambda::Function    GetTodoFunction          Resource handler       
+                                                                           returned message: "The 
+                                                                           runtime parameter of   
+                                                                           python3.7 is no longer 
+                                                                           supported for creating 
+                                                                           or updating AWS Lambda 
+                                                                           functions. We          
+                                                                           recommend you use the  
+                                                                           new runtime            
+                                                                           (python3.12) while     
+                                                                           creating or updating   
+                                                                           functions. (Service:   
+                                                                           Lambda, Status Code:   
+                                                                           400, Request ID: 80323 
+                                                                           102-ca94-45ff-9034-    
+                                                                           c29b465aad3b)"         
+                                                                           (RequestToken: 0bf9e48 
+                                                                           c-1b8a-b35d-f60d-      
+                                                                           31eb7ade22af,          
+                                                                           HandlerErrorCode:      
+                                                                           InvalidRequest)        
+CREATE_FAILED            AWS::Lambda::Function    DeleteTodoFunction       Resource handler       
+                                                                           returned message: "The 
+                                                                           runtime parameter of   
+                                                                           python3.7 is no longer 
+                                                                           supported for creating 
+                                                                           or updating AWS Lambda 
+                                                                           functions. We          
+                                                                           recommend you use the  
+                                                                           new runtime            
+                                                                           (python3.12) while     
+                                                                           creating or updating   
+                                                                           functions. (Service:   
+                                                                           Lambda, Status Code:   
+                                                                           400, Request ID: 8724f 
+                                                                           087-d32d-4e57-9b6b-    
+                                                                           861e1768441c)"         
+                                                                           (RequestToken:         
+                                                                           0ea3668c-0d66-34be-    
+                                                                           bc78-6a9a3c3991d5,     
+                                                                           HandlerErrorCode:      
+                                                                           InvalidRequest)        
+CREATE_FAILED            AWS::Lambda::Function    UpdateTodoFunction       Resource handler       
+                                                                           returned message: "The 
+                                                                           runtime parameter of   
+                                                                           python3.7 is no longer 
+                                                                           supported for creating 
+                                                                           or updating AWS Lambda 
+                                                                           functions. We          
+                                                                           recommend you use the  
+                                                                           new runtime            
+                                                                           (python3.12) while     
+                                                                           creating or updating   
+                                                                           functions. (Service:   
+                                                                           Lambda, Status Code:   
+                                                                           400, Request ID: 7b5c4 
+                                                                           613-ea38-4398-b1d5-    
+                                                                           9b3d896166d4)"         
+                                                                           (RequestToken: a6624d8 
+                                                                           e-42a1-f583-351e-      
+                                                                           0ff6f4c965cc,          
+                                                                           HandlerErrorCode:      
+                                                                           InvalidRequest)        
+CREATE_FAILED            AWS::Lambda::Function    CreateTodoFunction       Resource handler       
+                                                                           returned message: "The 
+                                                                           runtime parameter of   
+                                                                           python3.7 is no longer 
+                                                                           supported for creating 
+                                                                           or updating AWS Lambda 
+                                                                           functions. We          
+                                                                           recommend you use the  
+                                                                           new runtime            
+                                                                           (python3.12) while     
+                                                                           creating or updating   
+                                                                           functions. (Service:   
+                                                                           Lambda, Status Code:   
+                                                                           400, Request ID: f66e0 
+                                                                           0e6-98a9-41d2-900d-    
+                                                                           def9cb39271c)"         
+                                                                           (RequestToken: 847f6fa 
+                                                                           b-3764-db84-ed1c-      
+                                                                           eb58e18d7c14,          
+                                                                           HandlerErrorCode:      
+                                                                           InvalidRequest)        
+ROLLBACK_IN_PROGRESS     AWS::CloudFormation::S   production               The following          
+                         tack                                              resource(s) failed to  
+                                                                           create:                
+                                                                           [DeleteTodoFunction,   
+                                                                           CreateTodoFunction,    
+                                                                           ListTodosFunction,     
+                                                                           UpdateTodoFunction,    
+                                                                           GetTodoFunction].      
+                                                                           Rollback requested by  
+                                                                           user.                  
+DELETE_IN_PROGRESS       AWS::Lambda::Function    UpdateTodoFunction       -                      
+DELETE_IN_PROGRESS       AWS::Lambda::Function    ListTodosFunction        -                      
+DELETE_IN_PROGRESS       AWS::Lambda::Function    CreateTodoFunction       -                      
+DELETE_IN_PROGRESS       AWS::Lambda::Function    DeleteTodoFunction       -                      
+DELETE_IN_PROGRESS       AWS::Lambda::Function    GetTodoFunction          -                      
+DELETE_COMPLETE          AWS::Lambda::Function    ListTodosFunction        -                      
+DELETE_COMPLETE          AWS::Lambda::Function    CreateTodoFunction       -                      
+DELETE_COMPLETE          AWS::Lambda::Function    GetTodoFunction          -                      
+DELETE_COMPLETE          AWS::Lambda::Function    UpdateTodoFunction       -                      
+DELETE_COMPLETE          AWS::Lambda::Function    DeleteTodoFunction       -                      
+DELETE_IN_PROGRESS       AWS::DynamoDB::Table     TodosDynamoDbTable       -                      
+DELETE_COMPLETE          AWS::DynamoDB::Table     TodosDynamoDbTable       -                      
+ROLLBACK_COMPLETE        AWS::CloudFormation::S   production               -                      
+                         tack                                                                     
+-------------------------------------------------------------------------------------------------
+
