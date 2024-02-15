@@ -1,0 +1,24 @@
+
+		Managed S3 bucket: aws-sam-cli-managed-default-samclisourcebucket-rl6t3prunc5h
+		A different default S3 bucket can be set in samconfig.toml
+		Or by specifying --s3-bucket explicitly.
+
+	Deploying with following values
+	===============================
+	Stack name                   : todo-list-aws
+	Region                       : us-east-1
+	Confirm changeset            : False
+	Disable rollback             : False
+	Deployment s3 bucket         : aws-sam-cli-managed-default-samclisourcebucket-rl6t3prunc5h
+	Capabilities                 : ["CAPABILITY_IAM"]
+	Parameter overrides          : {"Stage": "staging"}
+	Signing Profiles             : {}
+
+Initiating deployment
+=====================
+
+
+
+Waiting for changeset to be created..
+
+No changes to deploy. Stack todo-list-aws is up to date
