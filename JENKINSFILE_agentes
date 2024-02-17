@@ -40,7 +40,7 @@ pipeline {
             steps {
                 sh 'export AWS_DEFAULT_REGION=us-east-1 && sam build && sam validate && sam deploy --force-upload --no-confirm-changeset --no-fail-on-empty-changeset --stack-name todo-list-aws --config-env staging --resolve-s3 | tee url_output.txt'
                 sh 'whoami'
-                sh 'hostname' 
+                sh 'hostname'
             }
         }
         stage('Rest') {
