@@ -9,8 +9,8 @@ pipeline {
                 stash includes: 'src/', name: 'src'
                 stash includes: 'test/', name: 'test'
                 stash includes: 'tests.ksh', name: 'fichero_test'
-                whoami
-                hostname
+                sh 'whoami'
+                sh 'hostname'
                
             }
         }
@@ -31,16 +31,16 @@ pipeline {
                             // Registar los resultados de bandit
                                 recordIssues tools: [pyLint(name: 'Bandit', pattern: 'bandit.out')]
                             sh 'rm -fr bandit.out flake8.out'
-                            whoami
-                            hostname
+                            sh 'whoami'
+                            sh 'hostname'
                           }
                     
                      }
         stage('SAM') {
             steps {
                 sh 'export AWS_DEFAULT_REGION=us-east-1 && sam build && sam validate && sam deploy --force-upload --no-confirm-changeset --no-fail-on-empty-changeset --stack-name todo-list-aws --config-env staging --resolve-s3 | tee url_output.txt'
-                whoami
-                hostname
+                sh 'whoami'
+                sh 'hostname'
             }
         }
         stage('Rest') {
@@ -56,8 +56,8 @@ pipeline {
         //        '''
                 
                 junit 'result-Apitest.xml'
-                whoami
-                hostname
+                sh 'whoami'
+                sh 'hostname'
 
                 }
             
@@ -70,8 +70,8 @@ pipeline {
                 sh 'git pull origin develop && git checkout master && git pull origin master && git merge develop'
         
                 sh 'git push https://rokitocri:`cat /var/lib/jenkins/secrets/token`@github.com/rokitocri/todo-list-aws.git && git checkout master && git merge develop && git push https://rokitocri:`cat /var/lib/jenkins/secrets/token`@github.com/rokitocri/todo-list-aws.git'
-                whoami
-                hostname
+                sh 'whoami'
+                sh 'hostname'
             }
     }
     }
