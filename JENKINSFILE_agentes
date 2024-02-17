@@ -60,7 +60,7 @@ pipeline {
        steps{
                 sh 'git config --global user.email "some_uno_que_nunca_lo_mires@email.com" && git config --global user.na   me "rokitocri" && git add .'
                 sh 'ksh commit.ksh' 
-                sh 'git push https://rokitocri:`cat /var/lib/jenkins/secrets/token`@github.com/rokitocri/todo-list-aws.git --all && git checkout master && git merge develop && git push https://rokitocri:`cat /var/lib/jenkins/secrets/token`@github.com/rokitocri/todo-list-aws.git --all'
+                sh 'git push https://rokitocri:`cat /var/lib/jenkins/secrets/token`@github.com/rokitocri/todo-list-aws.git --all && git checkout master && git merge develop && git push https://rokitocri:`cat /var/lib/jenkins/secrets/token`@github.com/rokitocri/todo-list-aws.git'
             }
     }
     }
