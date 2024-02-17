@@ -5,7 +5,7 @@ pipeline {
         stage('Get Code') {
             steps {
                 // Obtener código del repo
-                git branch: "develop", url: "https://github.com/rokitocri/todo-list-aws.git"           
+                //git branch: "develop", url: "https://github.com/rokitocri/todo-list-aws.git"           
                 stash includes: 'src/', name: 'src'
                 stash includes: 'test/', name: 'test'
                 stash includes: 'tests.ksh', name: 'fichero_test'
