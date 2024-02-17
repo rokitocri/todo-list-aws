@@ -9,12 +9,16 @@ pipeline {
                 stash includes: 'src/', name: 'src'
                 stash includes: 'test/', name: 'test'
                 stash includes: 'tests.ksh', name: 'fichero_test'
+                sh 'whoami'
+                sh 'hostname'
             }
         }
         
         stage('Deploy') {
             steps {
                 sh 'export AWS_DEFAULT_REGION=us-east-1 && sam build && sam validate && sam deploy --force-upload --no-confirm-changeset --no-fail-on-empty-changeset --stack-name production --config-env production --resolve-s3 | tee url_output.txt'
+                sh 'whoami'
+                sh 'hostname'
             }
         }
        stage('Rest') {
@@ -27,7 +31,8 @@ pipeline {
                 sh 'rm -fr url_output.txt && ksh tests.ksh && python3 -m pytest --junitxml=result-Apitest.xml -k "not deletetodo and not updatetodo and not addtodo" -s test/integration/todoApiTest.py'
         
                 junit 'result-Apitest.xml'
-
+                sh 'whoami'
+                sh 'hostname'
                 }
             
         }    
